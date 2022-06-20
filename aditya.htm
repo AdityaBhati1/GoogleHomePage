@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />	
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: cursive;
+		}
+	body{
+		background: url(unnamed.jpg);
+		background-size: cover;
+		background-position: fixed;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		z-index:-1;
+	}
+	.search-box{
+		width: 561px;
+		height: 44px;
+		background: #fff;
+		border-top-left-radius: 40px;
+		border-bottom-left-radius: 40px;
+		border-top-right-radius: 40px;
+		border-bottom-right-radius: 40px;
+		margin-top: 30px;
+		overflow: hidden;
+	}
+	.search-boxbar{
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		width: 561px;
+		height: 44px;
+		margin-top: 0px;
+	}
+	input{
+		width: 501px;
+		height: 40px;
+		border: none;
+		border-radius: 30px;
+		padding-left: 40px;
+		font-size: 1.2em;
+		border: none;
+		background-color: transparent;
+		resize: none;
+		outline: none;
+	}
+	input:focus::-webkit-input-placeholder {
+    	opacity: 0;
+    	transition: 0.1s;
+    	font-size: 10px;
+	}
+	input::-webkit-input-placeholder {
+    	font-size: 18px;
+	}
+	input:focus .search-box{
+		height: 134px
+	}
+	i{
+		color: #909090;
+		margin-left: 20px;
+	}
+	.micbox .mic {
+		margin-right: 20px;
+	}
+	.gs{
+		margin-top: 11em;
+	}
+	ul {
+  		list-style-type: none;
+  		text-align: left;
+	}
+	ul li:before {
+
+		content: '';
+		display: inline-block;
+		height: 25px;
+		width: 25px;
+ 		background-size: 25px;
+		background-image: url("trending.png");
+		background-repeat: no-repeat;
+		margin-right: 5px;
+		margin-left: 13px;
+		margin-top: 12px;	
+	}
+	li{	
+		height: 561px;
+		height: 44px;
+	}
+	li span{
+		margin-left: 20px;
+		font-size: 17px;
+		font-family: cursive;
+		display: inline-block;
+    	vertical-align: middle;
+    	margin-bottom: 23px;
+    	color: rgb(80, 80, 80);
+	}
+	li:hover{
+		background: #d3d3d3;
+	}
+	</style>
+</head>
+<body>
+	
+	<center>
+	<img class="gs" src="google.png"width="380px">
+<div class="search-box" id="srbox" onclick="expand()">
+	<div class="search-boxbar">
+	<i class="fa-solid fa-magnifying-glass" id="magniIcon"></i>
+	<input class="sch" type="search" id="search-box" placeholder="Search Google Or Type A URL"onfocus="expand()" onblur="shrink()">
+	<div class="micbox"><img class="mic"src="mic.png" width="31px"></div>
+</div>
+<ul id="trendingSearch">
+		<li onclick="search1()" id="li1"><span>Happy Father's Day - 1M+ searches</span></li>
+		<li onclick="search2()" id="li2"><span>Netherlands vs England - 200K+ searches</span></li>
+		<li onclick="search3()" id="li3"><span>Bhool Bhulaiyaa 2 OTT - 50K+ searches</span></li>
+		<li onclick="search4()" id="li4"><span>Rahul Gandhi - 50K+ searches</span></li>
+		<li onclick="search5()" id="li5"><span>Neeraj Chopra - 50K+ searches</span></li>
+		<li onclick="search6()" id="li6"><span>Bengaluru Weather - 20K+ searches</span></li>
+		<li onclick="search7()" id="li7"><span>June 19 - 20K+ searches</span></li>
+		<li onclick="search8()" id="li8"><span>Bharat Bandh - 20K+ searches</span></li>
+	</ul>
+</div>
+</center>
+</div>
+<script type="text/javascript">
+	var srBox = document.getElementById('srbox');
+	const trendingSearch = document.getElementById('trendingSearch');
+	var bar = document.getElementById("search-box");
+	 function expand(){
+		srBox.style.height = "400px";
+		srBox.style.marginBottom = "32px";
+		srBox.style.transition = "0.6s";
+		srBox.style.borderTopLeftRadius = "10px";
+		srBox.style.borderBottomLeftRadius = "10px";
+		srBox.style.borderTopRightRadius = "10px";
+		srBox.style.borderBottomRightRadius = "10px";
+		trendingSearch.style.display = "initial";
+	 }
+	 function shrink(){
+		srBox.style.height = "44px";
+		srBox.style.transition = "0.6s";
+		srBox.style.borderTopLeftRadius = "40px";
+		srBox.style.borderBottomLeftRadius = "40px";
+		srBox.style.borderTopRightRadius = "40px";
+		srBox.style.borderBottomRightRadius = "40px";
+	 } 
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var magniIcon = document.getElementById('magniIcon');
+
+    	magniIcon.addEventListener('click', function() {
+
+
+        var one = document.getElementById("search-box").value;
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var bar = document.getElementById('search-box');
+
+    	bar.addEventListener('keydown', function(event) {
+    		if(event.keyCode == 13){
+
+    	var one = document.getElementById("search-box").value;
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+		}
+
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li1 = document.getElementById('li1');
+
+    	li1.addEventListener('click', function() {
+
+
+        var one = "Happy Father's Day";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li2 = document.getElementById('li2');
+
+    	li2.addEventListener('click', function() {
+
+
+        var one = "Netherlands vs England";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li3 = document.getElementById('li3');
+
+    	li3.addEventListener('click', function() {
+
+
+        var one = "Bhool Bhulaiyaa 2 OTT";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li4 = document.getElementById('li4');
+
+    	li4.addEventListener('click', function() {
+
+
+        var one = "Rahul Gandhi";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li5 = document.getElementById('li5');
+
+    	li5.addEventListener('click', function() {
+
+
+        var one = "Neeraj Chopra";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li6 = document.getElementById('li6');
+
+    	li6.addEventListener('click', function() {
+
+        var one = "Bengaluru Weather";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li7 = document.getElementById('li7');
+
+    	li7.addEventListener('click', function() {
+
+        var one = "June 19";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+		document.addEventListener('DOMContentLoaded', function() {
+    	var li8 = document.getElementById('li8');
+
+    	li8.addEventListener('click', function() {
+
+        var one = "Bharat Bandh";
+        var two = 'https://www.google.com/search?q=' + encodeURIComponent(one);
+        window.location = two;
+    });
+});
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+	 bar.onkeydown = function(event){
+		if(event.keyCode == 13){
+			// my function here
+		}
+	} 
+		
+</script>
+</body>
+</html>
